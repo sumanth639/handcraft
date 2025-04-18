@@ -298,7 +298,7 @@ a:focus {
   background-color: #fc5a6d;
 }
 .olive {
-  background-color: #abbd38;
+  background-color: #ff6b6b;
 }
 .purple {
   background-color: #904eab;
@@ -1159,7 +1159,7 @@ button.accordion-button.collapsed {
   font-size: 20px;
   font-weight: 700;
   text-decoration: none;
-  background-color: #abbd38;
+  background-color: #ff6b6b;
 }
 .accordion-button.collapsed h4 {
   display: block;
@@ -1173,7 +1173,7 @@ button.accordion-button.collapsed {
 }
 .accordion-button:not(.collapsed) {
   color: #0c63e4;
-  background-color: #abbd38;
+  background-color: #ff6b6b;
   padding: 5px 15px;
 }
 .accordion-button:not(.collapsed) h4 {
@@ -4715,5 +4715,347 @@ p.item_text {
   }
   .hm_news_data ul li a {
     font-size: 13px;
+  }
+}
+/* Team  */
+.team-section {
+  padding: 80px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  color: #ff6b6b; /* Dusty Plum */
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  background-color: #ff6b6b;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-title p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.team-member {
+  width: calc(25% - 15px);
+  min-width: 220px;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(159, 126, 155, 0.2); /* Dusty Plum shadow */
+}
+
+.member-image {
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+.member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.team-member:hover .member-image img {
+  transform: scale(1.05);
+}
+
+.member-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(to top, rgba(159, 126, 155, 0.8), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.team-member:hover .member-image::after {
+  opacity: 1;
+}
+
+.member-info {
+  padding: 20px 15px;
+  text-align: center;
+}
+
+.member-name {
+  font-size: 1.2rem;
+  color: #ff6b6b; /* Dusty Plum */
+  margin-bottom: 5px;
+}
+
+.member-role {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.member-bio {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  /* Limit to 3 lines */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff6b6b; /* Dusty Plum */
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #ff6b6b; /* Dusty Plum */
+  color: white;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .team-member {
+    width: calc(25% - 15px);
+  }
+}
+
+@media (max-width: 992px) {
+  .team-member {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .team-section {
+    padding: 60px 15px;
+  }
+
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
+
+  .section-title p {
+    font-size: 1rem;
+  }
+
+  .team-member {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+.services-section {
+  padding: 80px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  color: #ff6b6b; /* Dusty Plum */
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  background-color: #ff6b6b;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-title p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.service-card {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(159, 126, 155, 0.15);
+}
+
+.service-icon {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(159, 126, 155, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #ff6b6b; /* Dusty Plum */
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  background-color: #ff6b6b; /* Dusty Plum */
+  color: white;
+}
+
+.service-content {
+  padding: 30px;
+}
+
+.service-title {
+  font-size: 1.4rem;
+  color: #444;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.service-card:hover .service-title {
+  color: #ff6b6b; /* Dusty Plum */
+}
+
+.service-description {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #ff6b6b; /* Dusty Plum */
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+  z-index: 2;
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .services-container {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .services-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .service-content {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-section {
+    padding: 60px 15px;
+  }
+
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
+
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+
+  .service-content {
+    padding: 20px;
   }
 }
