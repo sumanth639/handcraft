@@ -2655,6 +2655,7 @@ a.pro_buy:hover:before {
 }
 .contact_box {
   width: 100%;
+  height: 178px;
   text-align: center;
   border: 2px solid #fc5a6d;
   padding: 25px;
